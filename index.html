@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Data Display</title>
+    <!-- Add your CSS link here if you have any -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+  </head>
+  <body>
+    <!-- Search Bar -->
+    <input type="text" id="searchBar" placeholder="Search..." />
+    <button onclick="searchData()">Search</button>
+
+    <!-- Sorting Buttons -->
+    <div class="button-flexbox">
+      <button onclick="sortBy('nameAsc')">Sort A->Z</button>
+      <button onclick="sortBy('nameDesc')">Sort Z->A</button>
+      <button onclick="sortBy('marks')">Sort by marks</button>
+      <button onclick="sortBy('passing')">Sort by passing</button>
+      <button onclick="sortBy('class')">Sort by class</button>
+      <button onclick="sortBy('gender')">Sort by gender</button>
+    </div>
+
+    <!-- Main Table for Students -->
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Image and Name</th>
+          <th>Email</th>
+          <th>Marks</th>
+          <th>Status</th>
+          <th>Class</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <!-- Gender Tables (Initially Hidden) -->
+    <h2>Female Students</h2>
+    <table id="femaleTable" style="display: none">
+      <thead>
+        <tr>
+          <th>Image and Name</th>
+          <th>Email</th>
+          <th>Marks</th>
+          <th>Status</th>
+          <th>Class</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>Male Students</h2>
+    <table id="maleTable" style="display: none">
+      <thead>
+        <tr>
+          <th>Image and Name</th>
+          <th>Email</th>
+          <th>Marks</th>
+          <th>Status</th>
+          <th>Class</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
